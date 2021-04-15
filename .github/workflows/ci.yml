@@ -17,3 +17,12 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew test
+    - name: Upload test results to BuildPulse for flaky test detection
+      if: '!cancelled()' # Run this step even when the tests fail. Skip if the workflow is cancelled.
+      uses: Workshop64/buildpulse-action@main
+      with:
+        account: 68192324 # Replace this value with your BuildPulse account ID
+        repository: 358362426 # Replace this value with your BuildPulse repository ID
+        path: app/build/test-results # Replace this with the path where you're writing your XML reports. (By default, Gradle writes XML test reports to <app-root>/build/test-results.)
+        key: ${{ secrets.BUILDPULSE_ACCESS_KEY_ID }}
+        secret: ${{ secrets.BUILDPULSE_SECRET_ACCESS_KEY }}
