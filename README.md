@@ -20,8 +20,8 @@ BuildPulse offers integrations for:
 
 - **CircleCI** [[docs](https://circleci.com/developer/orbs/orb/workshop64/buildpulse)]
 - **GitHub Actions** [[docs](https://github.com/marketplace/actions/buildpulse)]
-- **Semaphore** [[docs](https://github.com/Workshop64/buildpulse-semaphore)]
-- **Travis CI** [[docs](https://github.com/Workshop64/buildpulse-travis-ci)]
+- **Semaphore** [[docs](https://github.com/buildpulse/buildpulse-semaphore)]
+- **Travis CI** [[docs](https://github.com/buildpulse/buildpulse-travis-ci)]
 - Buildkite (available in early access)
 - Jenkins (available in early access)
 - webapp.io (available in early access)
